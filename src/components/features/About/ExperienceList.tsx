@@ -52,10 +52,12 @@ const ExperienceList = ({ exps }: ExperienceListProps) => {
                         <MdCalendarToday className="w-4 h-4" />
                         <span>{exp.period}</span>
                       </div>
-                      <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm text-[var(--muted)] bg-[var(--glass-bg)] px-3 py-2 rounded-full border border-[var(--glass-border)]">
-                        <MdLocationOn className="w-4 h-4" />
-                        <span>{exp.location}</span>
-                      </div>
+                      {exp.location ? (
+                        <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm text-[var(--muted)] bg-[var(--glass-bg)] px-3 py-2 rounded-full border border-[var(--glass-border)]">
+                          <MdLocationOn className="w-4 h-4" />
+                          <span>{exp.location}</span>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
 

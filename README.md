@@ -1,4 +1,4 @@
-# Christopher Tanaka - Portfolio Website
+# Chris Tanaka - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS.
 

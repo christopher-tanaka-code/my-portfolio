@@ -1,4 +1,6 @@
-import { MdCalendarToday, MdRocketLaunch } from 'react-icons/md';
+import Link from 'next/link';
+
+import { MdRocketLaunch } from 'react-icons/md';
 
 const AboutHero = () => {
   return (
@@ -20,21 +22,19 @@ const AboutHero = () => {
         </div>
 
         <p className="text-xl text-[var(--muted)] leading-relaxed max-w-2xl mx-auto">
-          A seasoned software engineer with 12+ years of experience building innovative solutions at
-          the intersection of AI, real-time systems, and collaborative tools.
+          Senior Software Engineer with 12+ years of experience building high-performance,
+          user-centric web applications. Proven collaborator and technical owner, delivering
+          scalable products in fast-paced startup and large-scale production environments.
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://calendly.com/christophertanaka42/30min"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl gradient-bg on-gradient font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 focus-ring"
-            aria-label="Schedule a chat"
+            aria-label="Get in touch"
           >
-            <MdCalendarToday className="w-4 h-4" />
-            <span>Schedule a Chat</span>
-          </a>
+            <span>Get in Touch</span>
+          </Link>
           <span
             aria-label="Open to remote work"
             className="text-xs md:text-sm text-[var(--muted)] bg-[var(--glass-bg)] px-3 py-2 rounded-full border border-[var(--glass-border)]"

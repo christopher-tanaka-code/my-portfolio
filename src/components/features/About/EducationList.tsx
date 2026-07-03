@@ -64,24 +64,26 @@ const EducationList = ({ edus }: EducationListProps) => {
                       {edu.description}
                     </p>
 
-                    <div>
-                      <h5 className="text-lg font-semibold text-[var(--foreground)] mb-4 flex items-center space-x-2">
-                        <MdEmojiEvents className="w-5 h-5 text-yellow-400" />
-                        <span>Key Achievements</span>
-                      </h5>
-                      <div className="space-y-3">
-                        {edu.achievements.map((achievement, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center space-x-3 animate-slide-up"
-                            style={{ animationDelay: `${idx * 0.1}s` }}
-                          >
-                            <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
-                            <span className="text-[var(--muted)]">{achievement}</span>
-                          </div>
-                        ))}
+                    {edu.achievements.length > 0 ? (
+                      <div>
+                        <h5 className="text-lg font-semibold text-[var(--foreground)] mb-4 flex items-center space-x-2">
+                          <MdEmojiEvents className="w-5 h-5 text-yellow-400" />
+                          <span>Key Achievements</span>
+                        </h5>
+                        <div className="space-y-3">
+                          {edu.achievements.map((achievement, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center space-x-3 animate-slide-up"
+                              style={{ animationDelay: `${idx * 0.1}s` }}
+                            >
+                              <div className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                              <span className="text-[var(--muted)]">{achievement}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    ) : null}
                   </div>
                 </div>
               </div>

@@ -1,33 +1,28 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
-const getInitialTheme = () => {
-  if (typeof window === 'undefined') return false;
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) return savedTheme === 'light';
-  return window.matchMedia('(prefers-color-scheme: light)').matches;
-};
+import {
+  applyTheme,
+  getThemeServerSnapshot,
+  getThemeSnapshot,
+  persistTheme,
+  subscribeToTheme,
+} from '@/lib/theme';
 
 const DarkModeToggle = () => {
-  const [isLight, setIsLight] = useState(getInitialTheme);
+  const isLight = useSyncExternalStore(subscribeToTheme, getThemeSnapshot, getThemeServerSnapshot);
 
   useEffect(() => {
-    if (isLight) {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.remove('light');
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
+    applyTheme(isLight ? 'light' : 'dark');
   }, [isLight]);
 
   const toggleTheme = () => {
-    setIsLight(!isLight);
+    const nextTheme = isLight ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    persistTheme(nextTheme);
   };
 
   return (
@@ -36,14 +31,12 @@ const DarkModeToggle = () => {
       onClick={toggleTheme}
       className="relative w-12 h-6 rounded-full p-1 transition-all duration-500 focus-ring group hover:shadow-lg hover:shadow-[var(--accent)]/25 gradient-bg"
     >
-      {/* Toggle handle */}
       <div
         className={`w-4 h-4 bg-[var(--foreground)] rounded-full shadow-lg transform transition-transform duration-500 ease-out ${
           isLight ? 'translate-x-6' : 'translate-x-0'
         }`}
       />
 
-      {/* Icons */}
       <div className="absolute inset-0 flex items-center justify-between px-1 pointer-events-none">
         <MdLightMode
           size={12}
@@ -59,7 +52,6 @@ const DarkModeToggle = () => {
         />
       </div>
 
-      {/* Glow effect */}
       <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm gradient-bg"></div>
     </button>
   );

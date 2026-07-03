@@ -2,7 +2,12 @@
 
 import Image from 'next/image';
 
+import { profile } from '@/lib/data/profile';
+
 const ProfileAvatar = () => {
+  const [firstName, ...lastNameParts] = profile.name.split(' ');
+  const lastName = lastNameParts.join(' ');
+
   return (
     <div className="relative flex flex-col items-center mt-16">
       <div className="relative">
@@ -11,7 +16,7 @@ const ProfileAvatar = () => {
           <div className="w-full h-full rounded-full overflow-hidden">
             <Image
               src="/photo.png"
-              alt="Christopher Tanaka"
+              alt={profile.name}
               width={160}
               height={160}
               className="w-full h-full object-cover"
@@ -26,22 +31,20 @@ const ProfileAvatar = () => {
         style={{ animationDelay: '0.3s' }}
       >
         <h1 className="text-5xl sm:text-6xl font-bold">
-          <span className="gradient-text">Christopher</span>
+          <span className="gradient-text">{firstName}</span>
           <br />
-          <span className="text-[var(--foreground)]">Tanaka</span>
+          <span className="text-[var(--foreground)]">{lastName}</span>
         </h1>
 
         <div className="relative">
           <h2 className="text-2xl sm:text-3xl font-medium text-[var(--muted)] mb-2">
-            Senior Software Engineer
+            {profile.title}
           </h2>
 
-          {/* Animated underline */}
           <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mx-auto animate-pulse-glow"></div>
         </div>
       </div>
 
-      {/* Spacer below hero */}
       <div className="mt-10 w-full max-w-3xl px-4" />
     </div>
   );

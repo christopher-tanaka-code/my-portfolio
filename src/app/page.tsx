@@ -10,12 +10,13 @@ import HowIWork from '@/components/features/Home/HowIWork';
 import QuickStats from '@/components/features/Home/QuickStats';
 import SkillsOverview from '@/components/features/Home/SkillsOverview';
 import { homeHighlights, homeStats } from '@/lib/data/home';
+import { profile } from '@/lib/data/profile';
 import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'Home | Christopher Tanaka',
+  title: `Home | ${profile.name}`,
   description:
-    'Senior Software Engineer building low-latency, AI-powered products. Explore highlights, experience, and core skills.',
+    'Senior Software Engineer with 12+ years building high-performance, user-centric web applications. Explore experience, skills, and contact details.',
   alternates: {
     canonical: '/',
   },
@@ -46,7 +47,7 @@ const Home = () => {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           url: baseUrl,
-          name: 'Christopher Tanaka | Senior Software Engineer',
+          name: `${profile.name} | ${profile.title}`,
           inLanguage: 'en-US',
         }}
       />
@@ -54,14 +55,12 @@ const Home = () => {
         data={{
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Christopher Tanaka',
+          name: profile.name,
           url: baseUrl,
-          jobTitle: 'Senior Software Engineer',
-          sameAs: [
-            'https://www.christtanaka.life/',
-            // 'https://www.linkedin.com/in/USERNAME',
-            // 'https://github.com/USERNAME',
-          ],
+          jobTitle: profile.title,
+          email: `mailto:${profile.email}`,
+          telephone: profile.phone,
+          sameAs: [profile.website],
         }}
       />
       {/* Hero Section */}

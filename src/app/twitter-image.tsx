@@ -1,5 +1,7 @@
 import { ImageResponse } from 'next/og';
 
+import { profile } from '@/lib/data/profile';
+
 export const runtime = 'edge';
 export const size = {
   width: 1200,
@@ -8,8 +10,8 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function TwitterImage() {
-  const title = 'Christopher Tanaka';
-  const subtitle = 'Senior Software Engineer • AI • Realtime UI';
+  const title = profile.name;
+  const subtitle = 'Senior Software Engineer • React/Next.js • AI/LLM';
 
   return new ImageResponse(
     (

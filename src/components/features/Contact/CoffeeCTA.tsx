@@ -1,4 +1,8 @@
+import Link from 'next/link';
+
 import { MdCoffee } from 'react-icons/md';
+
+import { profile } from '@/lib/data/profile';
 
 const CoffeeCTA = () => {
   return (
@@ -20,19 +24,17 @@ const CoffeeCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://calendly.com/christophertanaka42/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="px-8 py-4 rounded-2xl on-gradient font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus-ring gradient-bg"
             >
-              Schedule a Chat
-            </a>
+              Get in Touch
+            </Link>
             <a
-              href="/about"
+              href={`mailto:${profile.email}`}
               className="px-8 py-4 glass-card border border-[var(--border)] hover:border-[var(--border-strong)] rounded-2xl text-[var(--foreground)] font-semibold text-lg transition-all duration-300 focus-ring"
             >
-              View My Work
+              Email Me
             </a>
           </div>
         </div>

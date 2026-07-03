@@ -1,5 +1,7 @@
 import { ImageResponse } from 'next/og';
 
+import { profile } from '@/lib/data/profile';
+
 export const runtime = 'edge';
 
 export const size = {
@@ -9,8 +11,8 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function OpengraphImage() {
-  const title = 'Christopher Tanaka | Senior Software Engineer';
-  const subtitle = 'Low-latency, AI-powered products • Real-time collaboration';
+  const title = `${profile.name} | ${profile.title}`;
+  const subtitle = 'High-performance web apps • React/Next.js • AI-powered systems';
 
   return new ImageResponse(
     (

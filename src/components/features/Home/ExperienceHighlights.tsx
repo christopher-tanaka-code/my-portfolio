@@ -42,12 +42,12 @@ const ExperienceHighlights = () => {
                 damage detection, valuations).
               </li>
               <li>
-                Integrated multimodal LLM-powered search via RAG across large-scale property
-                datasets.
+                Led frontend modernization and performance optimization migrating Page Router to App
+                Router, improving responsiveness and user experience.
               </li>
               <li>
-                Implemented Stripe billing system (Checkout + customer portal) and led Page Router →
-                App Router migration.
+                Integrated multimodal LLM-powered RAG search across large-scale property datasets;
+                implemented Stripe billing (Checkout + customer portal).
               </li>
             </ul>
           </article>

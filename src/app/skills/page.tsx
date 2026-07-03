@@ -6,11 +6,12 @@ import ProficiencyGrid from '@/components/features/Skills/ProficiencyGrid';
 import SkillsCTA from '@/components/features/Skills/SkillsCTA';
 import SkillsGrid from '@/components/features/Skills/SkillsGrid';
 import SkillsHero from '@/components/features/Skills/SkillsHero';
+import { profile } from '@/lib/data/profile';
 import { proficiencyLevels, skillCategories as skillCategoriesData } from '@/lib/data/skills';
 import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'Skills | Christopher Tanaka',
+  title: `Skills | ${profile.name}`,
   description:
     'Technical arsenal across frontend, backend, AI/ML, and DevOps. Explore categorized skills and proficiency levels.',
   alternates: {

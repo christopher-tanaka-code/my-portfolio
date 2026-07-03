@@ -7,12 +7,12 @@ import ContactForm from '@/components/features/Contact/ContactForm';
 import ContactHero from '@/components/features/Contact/ContactHero';
 import MethodGrid from '@/components/features/Contact/MethodGrid';
 import { contactMethods as contactMethodsData } from '@/lib/data/contact';
+import { profile } from '@/lib/data/profile';
 import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'Contact | Christopher Tanaka',
-  description:
-    'Get in touch with Christopher Tanaka for projects, opportunities, or a quick coffee chat. Email, phone, and more.',
+  title: `Contact | ${profile.name}`,
+  description: `Get in touch with ${profile.name} for projects, opportunities, or a quick coffee chat. Email, phone, and more.`,
   alternates: {
     canonical: '/contact',
   },
@@ -42,7 +42,7 @@ const Contact = () => {
         data={{
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Christopher Tanaka',
+          name: profile.name,
           url: `${baseUrl}/contact`,
           contactPoint: [
             ...(email

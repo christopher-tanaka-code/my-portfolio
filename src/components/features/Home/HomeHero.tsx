@@ -53,8 +53,9 @@ const HomeHero = () => {
           <p className="mt-4 md:mt-6 text-base md:text-xl text-[var(--muted)] leading-relaxed animate-fade-in-scale">
             Senior Software Engineer with{' '}
             <span className="gradient-text font-semibold">12+ years </span>
-            delivering real-time collaboration, high-performance UI, and production ML integrations
-            for customer-facing products.
+            building high-performance, user-centric web applications. Deep expertise in React,
+            Next.js, and TypeScript, with strong backend experience designing real-time,
+            data-intensive and AI-powered systems.
           </p>
           <div className="mt-4 flex justify-center">
             <span
