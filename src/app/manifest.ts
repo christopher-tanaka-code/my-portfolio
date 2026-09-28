@@ -15,8 +15,7 @@ export default function manifest(): MetadataRoute.Manifest {
     display: 'standalone',
     theme_color,
     background_color,
-    description:
-      'Senior Software Engineer with 12+ years building high-performance, user-centric web applications with React, Next.js, and AI-powered systems.',
+    description: profile.metaDescription,
     icons: [
       {
         src: '/icon.svg',

@@ -15,8 +15,7 @@ import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
   title: `Home | ${profile.name}`,
-  description:
-    'Senior Software Engineer with 12+ years building high-performance, user-centric web applications. Explore experience, skills, and contact details.',
+  description: `${profile.metaDescription} Explore experience, skills, and contact details.`,
   alternates: {
     canonical: '/',
   },
@@ -58,6 +57,8 @@ const Home = () => {
           name: profile.name,
           url: baseUrl,
           jobTitle: profile.title,
+          description: profile.summary,
+          image: `${baseUrl}/photo.png`,
           email: `mailto:${profile.email}`,
           telephone: profile.phone,
           sameAs: [profile.website],

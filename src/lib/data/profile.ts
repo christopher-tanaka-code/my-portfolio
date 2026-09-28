@@ -8,5 +8,7 @@ export const profile = {
   websiteDisplay: 'christtanaka.life',
   location: 'Miami, FL',
   summary:
-    'Senior Software Engineer with 12+ years of experience building high-performance, user-centric web applications. Deep expertise in React, Next.js, and TypeScript, with strong backend experience designing real-time, data-intensive and AI-powered systems. Proven collaborator and technical owner, delivering scalable products in fast-paced startup and large-scale production environments.',
+    'Senior Software Engineer with 12+ years of experience building scalable, user-centered web applications and full-stack platforms across AI, SaaS, property technology, healthcare, and advertising. Deep expertise in React, Next.js, TypeScript, Node.js, Python, and Java, with a track record of owning end-to-end delivery for real-time, data-intensive, and AI-powered systems. Technical leader who partners effectively with product, design, data, and infrastructure teams to improve performance, reliability, security, and developer velocity.',
+  metaDescription:
+    'Senior Software Engineer with 12+ years building scalable, user-centered web apps and AI-powered systems in React, Next.js, and TypeScript.',
 } as const;

@@ -50,6 +50,8 @@ const About = () => {
           '@type': 'Person',
           name: profile.name,
           jobTitle: profile.title,
+          description: profile.summary,
+          image: `${baseUrl}/photo.png`,
           url: `${baseUrl}/about`,
           email: `mailto:${profile.email}`,
           telephone: profile.phone,

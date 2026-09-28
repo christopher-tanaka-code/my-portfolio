@@ -12,7 +12,7 @@ export const contentType = 'image/png';
 
 export default function OpengraphImage() {
   const title = `${profile.name} | ${profile.title}`;
-  const subtitle = 'High-performance web apps • React/Next.js • AI-powered systems';
+  const subtitle = 'User-centered web apps • React/Next.js • AI-powered systems';
 
   return new ImageResponse(
     (

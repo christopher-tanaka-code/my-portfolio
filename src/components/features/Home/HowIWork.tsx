@@ -23,8 +23,8 @@ const HowIWork = () => {
           <div className="glass-card p-6 rounded-2xl border border-[var(--border)]">
             <h3 className="font-semibold mb-2 text-[var(--foreground)]">Ownership & quality</h3>
             <p className="text-sm text-[var(--muted)]">
-              End-to-end responsibility from data to UI; raise the bar on reliability,
-              accessibility, and maintainability.
+              End-to-end ownership from data to UI, with a focus on reliability, security, and
+              developer velocity.
             </p>
           </div>
         </div>

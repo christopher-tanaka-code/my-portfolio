@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { MdRocketLaunch } from 'react-icons/md';
 
+import { profile } from '@/lib/data/profile';
+
 const AboutHero = () => {
   return (
     <section className="relative py-20 text-center">
@@ -21,10 +23,8 @@ const AboutHero = () => {
           <h1 className="text-4xl sm:text-5xl font-bold gradient-text">About Me</h1>
         </div>
 
-        <p className="text-xl text-[var(--muted)] leading-relaxed max-w-2xl mx-auto">
-          Senior Software Engineer with 12+ years of experience building high-performance,
-          user-centric web applications. Proven collaborator and technical owner, delivering
-          scalable products in fast-paced startup and large-scale production environments.
+        <p className="text-xl text-[var(--muted)] leading-relaxed max-w-3xl mx-auto">
+          {profile.summary}
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">

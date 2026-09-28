@@ -9,27 +9,27 @@ const SkillsOverview = () => {
           <div className="glass-card p-5 rounded-2xl border border-[var(--border)]">
             <h3 className="font-semibold mb-3">Frontend Development</h3>
             <div className="flex flex-wrap gap-2 text-xs text-[var(--muted)]">
-              <span className="glass px-2 py-1 rounded-md">React.js</span>
+              <span className="glass px-2 py-1 rounded-md">React</span>
               <span className="glass px-2 py-1 rounded-md">TypeScript</span>
               <span className="glass px-2 py-1 rounded-md">Next.js</span>
-              <span className="glass px-2 py-1 rounded-md">TailwindCSS</span>
+              <span className="glass px-2 py-1 rounded-md">Tailwind CSS</span>
               <span className="glass px-2 py-1 rounded-md">Redux</span>
               <span className="glass px-2 py-1 rounded-md">React Query</span>
             </div>
           </div>
           <div className="glass-card p-5 rounded-2xl border border-[var(--border)]">
-            <h3 className="font-semibold mb-3">Backend & Databases</h3>
+            <h3 className="font-semibold mb-3">Backend and Data</h3>
             <div className="flex flex-wrap gap-2 text-xs text-[var(--muted)]">
               <span className="glass px-2 py-1 rounded-md">Node.js</span>
               <span className="glass px-2 py-1 rounded-md">NestJS</span>
               <span className="glass px-2 py-1 rounded-md">GraphQL</span>
-              <span className="glass px-2 py-1 rounded-md">Postgres</span>
+              <span className="glass px-2 py-1 rounded-md">PostgreSQL</span>
               <span className="glass px-2 py-1 rounded-md">Kafka</span>
-              <span className="glass px-2 py-1 rounded-md">LiveGraph</span>
+              <span className="glass px-2 py-1 rounded-md">Python</span>
             </div>
           </div>
           <div className="glass-card p-5 rounded-2xl border border-[var(--border)]">
-            <h3 className="font-semibold mb-3">AI & LLM</h3>
+            <h3 className="font-semibold mb-3">AI and LLM Systems</h3>
             <div className="flex flex-wrap gap-2 text-xs text-[var(--muted)]">
               <span className="glass px-2 py-1 rounded-md">RAG</span>
               <span className="glass px-2 py-1 rounded-md">OpenAI</span>

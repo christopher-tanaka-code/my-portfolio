@@ -18,16 +18,16 @@ const ExperienceHighlights = () => {
             </header>
             <ul className="text-[var(--muted)] text-sm space-y-2 list-disc list-inside">
               <li>
-                Building an AI-native OS for product & engineering teams with a shared intelligence
-                layer that stays current in real time.
+                Building an AI-native OS that connects strategy, requirements, planning, and
+                execution in a shared intelligence layer updated in real time.
               </li>
               <li>
-                Developing agentic &ldquo;AI teammates&rdquo; to reduce coordination overhead across
-                planning, handoffs, and delivery.
+                Designing agentic AI teammates that cut coordination overhead across alignment,
+                planning, handoffs, and status reporting.
               </li>
               <li>
-                Shipping features in a TypeScript monorepo (Next.js/NestJS); driving enterprise
-                readiness with Auth0, Vanta, and SOC 2 Type II.
+                Owning end-to-end delivery in a Next.js and NestJS monorepo, with Auth0, Vanta, and
+                SOC 2 Type II readiness.
               </li>
             </ul>
           </article>
@@ -38,16 +38,16 @@ const ExperienceHighlights = () => {
             </header>
             <ul className="text-[var(--muted)] text-sm space-y-2 list-disc list-inside">
               <li>
-                Built Next.js/TypeScript dashboards for AI-powered property intelligence (scores,
-                damage detection, valuations).
+                Built Next.js and TypeScript dashboards for property intelligence, including
+                condition scores, damage detection, renovation forecasts, and 360-degree valuations.
               </li>
               <li>
-                Led frontend modernization and performance optimization migrating Page Router to App
-                Router, improving responsiveness and user experience.
+                Led the Pages Router to App Router migration, improving routing, data fetching, and
+                responsiveness.
               </li>
               <li>
-                Integrated multimodal LLM-powered RAG search across large-scale property datasets;
-                implemented Stripe billing (Checkout + customer portal).
+                Integrated multimodal RAG search across property datasets and shipped Stripe
+                Checkout plus a customer portal for subscription billing.
               </li>
             </ul>
           </article>

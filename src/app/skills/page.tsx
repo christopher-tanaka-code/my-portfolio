@@ -13,7 +13,7 @@ import { renderIcon } from '@/lib/icons';
 export const metadata: Metadata = {
   title: `Skills | ${profile.name}`,
   description:
-    'Technical arsenal across frontend, backend, AI/ML, and DevOps. Explore categorized skills and proficiency levels.',
+    'Technical skills across frontend, backend, data, AI/LLM systems, and DevOps. Explore categorized skills and proficiency levels.',
   alternates: {
     canonical: '/skills',
   },

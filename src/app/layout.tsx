@@ -26,8 +26,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: `${profile.name} | ${profile.title}`,
-  description:
-    'Senior Software Engineer with 12+ years building high-performance, user-centric web applications. Deep expertise in React, Next.js, TypeScript, and AI-powered systems.',
+  description: profile.metaDescription,
   alternates: {
     canonical: '/',
   },
@@ -35,16 +34,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     title: `${profile.name} | ${profile.title}`,
-    description:
-      'Senior Software Engineer building high-performance, user-centric web applications with React, Next.js, and AI-powered systems.',
+    description: profile.metaDescription,
     siteName: `${profile.name} Portfolio`,
     images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${profile.name} | ${profile.title}`,
-    description:
-      'Senior Software Engineer building high-performance, user-centric web applications with React, Next.js, and AI-powered systems.',
+    description: profile.metaDescription,
     images: ['/twitter-image'],
   },
   icons: {

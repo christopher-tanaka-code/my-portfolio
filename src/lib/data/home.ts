@@ -3,7 +3,7 @@ export const homeHighlights = [
     iconName: 'code',
     title: 'High-Performance Web Apps',
     description:
-      'React, Next.js, and TypeScript — UI performance optimization, rendering, and user-centric delivery.',
+      'React, Next.js, and TypeScript — UI performance optimization, rendering, and user-centered delivery.',
     gradient: 'from-indigo-500 to-purple-600',
   },
   {
